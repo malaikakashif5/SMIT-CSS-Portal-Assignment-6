@@ -12,6 +12,7 @@ body {
 }
 
 /* HEADER START */
+
 header {
     background-color: #D9D9D9;
     padding: 0 40px;
@@ -22,7 +23,6 @@ header {
     right: 0;
     display: flex;
     align-items: center;
-
 }
 
 .header {
@@ -32,7 +32,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .logo img {
@@ -48,12 +47,23 @@ header {
     gap: 8px;
 }
 
+/* wrapper box remove child visible */
+.menu-box,
+.nav {
+    display: contents;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .links a i {
     font-size: 11px;
     margin-left: 2px;
     vertical-align: middle;
 }
-
 
 .links {
     display: flex;
@@ -63,13 +73,14 @@ header {
 .links a {
     font-size: 16px;
     font-weight: 400;
+    text-decoration: none;
+    color: black;
 }
 
 .button {
     display: flex;
     align-items: center;
     gap: 16px;
-
 }
 
 .button button {
@@ -93,6 +104,51 @@ header {
 
 .button button:hover {
     cursor: pointer;
+}
+
+/* ////////////////////MEDIA QUERY START////////////// */
+@media (max-width: 900px) {
+    .menu-box {
+        display: block;
+        position: relative;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+
+    .nav {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        min-width: 300px;
+        height: 100vh;
+
+    }
+
+    .menu-box:hover .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .links,
+    .button {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .btn2 {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* HEADER END */
@@ -309,6 +365,56 @@ form button:hover {
     width: auto;
     opacity: 0.65;
 }
+/* /////////MEDIA QUERY START///// */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .picture,
+    .bottom-content {
+        margin-left: 40px;
+    }
+
+    .hero-content h1 {
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .big-pic {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .big-pic .img>img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 400px) {
+    form {
+        flex-direction: column;
+        height: 90px;
+        margin: 0 16px 10px;
+        border: none;
+        gap: 8px;
+    }
+
+    form input,
+    form button {
+        width: 100%;
+        height: 44px;
+        border-radius: 6px;
+    }
+
+    form input {
+        border: 2px solid #0066FF;
+    }
+}
 
 /* ///////////HERO SECTION END  */
 /* ///////////SECOND SECTION START  */
@@ -384,7 +490,33 @@ form button:hover {
 .span:hover span {
     color: #1D63ED;
 }
+/* //////////////MEDIA QUERY START////////// */
+@media (max-width:900px) {
+.second-section {
+    flex-direction: column;
+    margin-top: 90px;
+}
+.second-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.second-content h3{
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 40px;
+}
 
+}
+
+@media (max-wdth:400px){
+    .second-img img{
+        width: auto;
+        height: auto;
+        margin-left: 0%;
+    }
+}
 /* ///////////SECOND SECTION END  */
 /* ///////////// CARD SECTION START  */
 .card-content {
@@ -458,3 +590,110 @@ form button:hover {
 }
 
 /* ////////////// CARD SECTION END */
+/* ////////////// SECOND CARD SECTION START */
+.second-card-section {
+    margin-left: 40px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.second-card-section h3 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.second-card-section h3 span {
+    background-color: yellow;
+}
+
+.secondcard {
+    display: flex;
+    gap: 25px;
+    text-align: left;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.second-cards {
+    background-color: #EEF1F7;
+    padding: 28px 24px;
+    border-radius: 8px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.second-cards h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.heading-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 14px;
+    width: 250px;
+}
+
+.heading-card img {
+    width: 16px;
+    height: 16px;
+}
+
+.second-cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* /////////////////////////////CENTER CONTENT START //////////*/
+.heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-content {
+    width: 400px;
+}
+
+.brand-logo {
+    height: 30px;
+    width: 95px;
+}
+
+.img-content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.line,
+.img-content p {
+    font-size: 14px;
+}
+
+.img-content p {
+    margin-left: 5px;
+}
+@media (max-width:700px){
+.line{
+    width: 300px;
+}
+.img-content {
+    flex-direction: column;
+}
+}
+/* //////////////SECOND CARD SECTION END */
