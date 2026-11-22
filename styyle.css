@@ -694,6 +694,34 @@ form button:hover {
   }
 }
 /* //////////////SECOND CARD SECTION END ////////////*/
+
+/* //////////////FAQ SECTION START////////////////////// */
+.section-faq{
+    background-color: #EEF1F7;
+}
+.faq-section{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.faq-section h2{
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 900;
+}
+.faq-section p{
+    margin-bottom :40px;
+    font-size: 16px; 
+}
+.one-ans{
+    display: none;
+    text-decoration: underline;
+}
+.one-question:hover + .one-ans {
+  display: block;
+}
+/*////////////// FAQ SECTION END//////////////////////// */
 /* /////  THIRD LAST SECTION START  ///// */
 .third-last-section {
   padding: 100px;
