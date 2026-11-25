@@ -14,6 +14,8 @@ body {
 /* HEADER START */
 
 header {
+  position: fixed;
+  z-index: 100000;
   background-color: #d9d9d9;
   padding: 0 40px;
   width: 100%;
@@ -232,7 +234,7 @@ form button:hover {
 
 /* RIGHT SIDE START */
 .picture {
-  margin-top: 40px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -694,29 +696,130 @@ form button:hover {
   }
 }
 /* //////////////SECOND CARD SECTION END ////////////*/
+/* //////////////STORY PLATFROM START////////////// */
+.platform {
+  margin: 0 auto;
+  /* vertically align */
+  max-width: 1000px;
+  width: 90%;
+}
+.story-platform {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.story-platform h2 {
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: 900;
+}
+.story-platform h2 span {
+  background-color: yellow;
+}
+.shoppable-content h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.shoppable-content p {
+  font-size: 14px;
+  width: 500px;
+}
+/* check mark */
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.point img {
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+}
+.shoppable {
+  /* column equal */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.person-img img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+.person-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.shoppable-content {
+  flex: 1;
+  max-width: 450px;
+}
+@media (max-width: 800px) {
+  .shoppable {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  .shoppable-content p {
+    width: 100%;
+  }
+  .shoppable-content {
+    max-width: 100%;
+  }
+}
 
+/* //////////////STORY PLATFROM END////////////// */
+/* ////////////////LONG CARD START////////////////// */
+.long-card {
+  background-color: #eef1f7;
+}
+.card-long {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-long h2 {
+  padding-top: 100px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 900;
+}
+.card-long p {
+  padding-bottom: 80px;
+  font-size: 20px;
+}
+
+/* ////////////////LONG CARD END////////////////// */
 /* //////////////FAQ SECTION START////////////////////// */
-.section-faq{
-    background-color: #EEF1F7;
+.section-faq {
+  background-color: #eef1f7;
 }
-.faq-section{
-    padding: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.faq-section {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.faq-section h2{
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-weight: 900;
+.faq-section h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 900;
 }
-.faq-section p{
-    margin-bottom :40px;
-    font-size: 16px; 
+.faq-section p {
+  margin-bottom: 40px;
+  font-size: 16px;
 }
-.one-ans{
-    display: none;
-    text-decoration: underline;
+.one-ans {
+  display: none;
+  text-decoration: underline;
 }
 .one-question:hover + .one-ans {
   display: block;
@@ -752,7 +855,9 @@ form button:hover {
   gap: 20px;
   flex-wrap: wrap;
 }
-.two img,.four img,.five img {
+.two img,
+.four img,
+.five img {
   width: 70px;
   height: 20px;
 }
@@ -784,11 +889,10 @@ form button:hover {
   margin-top: 10px;
   font-size: 12px;
 }
-@media (max-width:400px){
-    .second-last p:first-of-type{
-        width: 300px;
-    }
-    
+@media (max-width: 400px) {
+  .second-last p:first-of-type {
+    width: 300px;
+  }
 }
 /* ////////////////////SECOND LAST SECTION END/////////////// */
 /* ////////////// FOOTER START ////////////////*/
@@ -800,7 +904,7 @@ footer {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 30px 150px;
   padding-bottom: 100px;
 }
@@ -819,15 +923,16 @@ footer {
   margin-right: 10px;
 }
 #footerpara {
-  width: 300px;
+  max-width: 300px;
 }
 /* ////////////// FOOTER END */
 /* FOOTER MEDIA QUERY START */
 @media (max-width: 1000px) {
   .footer {
     flex-direction: column;
-    padding: 30px 50px;
-    padding-bottom: 30px;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 40px 20px;
   }
   .footerlink h6 {
     padding-top: 20px;
