@@ -703,6 +703,70 @@ form button:hover {
   }
 }
 /* //////////////SECOND CARD SECTION END ////////////*/
+/* /////STORY SECTION START///// */
+.story-section {
+  padding: 60px 20px;
+}
+.story {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: #111827;
+  color: #ffffff;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 40px 40px 60px;
+  border-radius: 16px;
+}
+.story-content {
+  flex: 1;
+}
+
+.story-content h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+}
+
+.story-content p:first-of-type {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+.story-content p:nth-of-type(2) {
+  font-size: 14px;
+  margin: 0 0 28px 0;
+}
+.story-content img {
+  height: 30px;
+  width: auto;
+}
+
+.story > img {
+  width: 45%;
+  max-width: 460px;
+  border-radius: 12px;
+}
+@media (max-width: 800px) {
+  .story {
+    flex-direction: column;
+    padding: 35px 25px;
+    gap: 30px;
+    margin: 0 20px;
+    width: auto;
+  }
+  .story > img {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+  }
+  .story-section {
+    padding: 40px 15px;
+  }
+}
+/* //////////STORY SECTION END////// */
 /* /////////CUSTOMER REVIEWS SECTION START ////*/
 .customer-review {
   display: flex;
@@ -778,7 +842,6 @@ form button:hover {
 @media (max-width: 600px) {
   .review-cards {
     flex-direction: column;
-    /* align-items: center; */
   }
 
   .review-card {
@@ -789,10 +852,10 @@ form button:hover {
   .review-card {
     width: 90%;
   }
-  .customer-review h2, .customer-review > p{
-  margin-left: 10px;
-}
-
+  .customer-review h2,
+  .customer-review > p {
+    margin-left: 40px;
+  }
 }
 
 /*////////////// CUSTOMER REVIEWS SECTION END ///////////////////// */
@@ -1013,11 +1076,11 @@ form button:hover {
     flex-direction: column;
   }
 }
-@media(max-width:400px){
-  .card-long h2,.card-long > p {
-  margin-left: 10px;
-}
-
+@media (max-width: 400px) {
+  .card-long h2,
+  .card-long > p {
+    margin-left: 10px;
+  }
 }
 /* ////////////////LONG CARD END////////////////// */
 /* //////////////FAQ SECTION START////////////////////// */
@@ -1056,7 +1119,7 @@ form button:hover {
   justify-content: center;
   padding-top: 10px;
   font-size: 30px;
-   word-spacing: 5px;
+  word-spacing: 5px;
   font-weight: 900;
 }
 
@@ -1086,17 +1149,17 @@ form button:hover {
   width: 60px;
   height: 20px;
 }
-@media(max-width:400px){
+@media (max-width: 400px) {
   .third-last h2 {
-  margin-left: 10px;
-  font-size: 25px;
-  font-weight: 800;
-  margin-top: 40px;
-  word-spacing: 5px;
-}
-.third-last-section {
-  padding: 0px;
-}
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 40px;
+    word-spacing: 5px;
+  }
+  .third-last-section {
+    padding: 0px;
+  }
 }
 
 /* /////  THIRD LAST SECTION END  ///// */
