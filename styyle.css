@@ -703,6 +703,25 @@ form button:hover {
   }
 }
 /* //////////////SECOND CARD SECTION END ////////////*/
+/* //////////FEATURE SECTION START ////////// */
+.feature-section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.feature-section h2{
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: 800;
+}
+@media(max-width:550px){
+  .feature-section h2{
+margin-left: 20px;
+}
+}
+/* ///////////FEATURE SECTION END///////// */
+
 /* /////STORY SECTION START///// */
 .story-section {
   padding: 60px 20px;
@@ -801,6 +820,9 @@ form button:hover {
   /* 4 cards in 1 row */
   width: calc(25% - 15px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 /* customer image  */
 .customer-img img {
@@ -833,6 +855,10 @@ form button:hover {
 }
 .manage img {
   margin-top: 20px;
+}
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 1100px) {
   .review-card {
