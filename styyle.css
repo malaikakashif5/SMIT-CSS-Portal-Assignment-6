@@ -1196,6 +1196,7 @@ form button:hover {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  max-width: 300px;
 }
 .two img,
 .four img,
@@ -1218,6 +1219,7 @@ form button:hover {
   .third-last-section {
     padding: 0px;
   }
+  
 }
 
 /* /////  THIRD LAST SECTION END  ///// */
