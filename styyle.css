@@ -799,11 +799,118 @@ form button:hover {
   font-size: 30px;
   font-weight: 900;
 }
-.card-long p {
+.card-long > p {
   padding-bottom: 80px;
   font-size: 20px;
 }
+ /* Pricing Cards Section Start  */
+ .price-cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+ }
+ .price-card {
+  background-color: #FFFFFF;
+  border: 2px solid #D6DAE4;
+  border-radius: 10px;
+  padding: 30px 22px;
+  /* all cards width are equal */
+  flex: 1;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.price-card::before {
+  content: "Most businesses start with PRO";
+  position: absolute;
+  top: -32px;
+  left: -2px;
+  right: -2px;
+  background-color: #0066ff;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.price-card:hover {
+  border-color: #0066ff;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 10px 25px rgba(0, 102, 255, 0.12);
+}
+.price-card:hover::before {
+  visibility: visible;
+}
 
+.price-card > p:first-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.price-card > p:nth-of-type(2) {
+  font-size: 38px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+}
+
+.price-card > p:nth-of-type(2) span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Button */
+.card-button {
+  margin-bottom: 24px;
+}
+
+.card-button button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #0066ff;
+  border: 1px solid #0066ff;
+  transition: all 0.3s ease;
+}
+
+.price-card:hover .card-button button {
+  background-color: #0066ff;
+  color: #ffffff;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+
+.point p {
+  font-size: 13px;
+}
+
+.point.disable p {
+  color: #b0b0b0;
+  text-decoration: line-through;
+}
+
+.point.disable img {
+  /* light color */
+  opacity: 0.35;
+}
 /* ////////////////LONG CARD END////////////////// */
 /* //////////////FAQ SECTION START////////////////////// */
 .section-faq {
