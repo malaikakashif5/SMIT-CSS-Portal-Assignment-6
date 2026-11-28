@@ -1225,7 +1225,7 @@ form button:hover {
   }
   .third-img,
   .third-img-one {
-    max-width: 100%;       
+    max-width: 90%;       
     gap: 18px;               
     padding-bottom: 18px;
   }
