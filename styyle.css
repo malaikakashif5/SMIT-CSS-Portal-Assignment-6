@@ -1229,6 +1229,9 @@ form button:hover {
     gap: 18px;               
     padding-bottom: 18px;
   }
+  .three{
+    display: none;
+  }
 }
 
 /* /////  THIRD LAST SECTION END  ///// */
